@@ -79,8 +79,8 @@ export default function ForgotPassword({ onSwitchToLogin }: ForgotPasswordProps)
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8">
+    <div className="min-h-screen bg-gradient-to-br from-black via-slate-800 to-indigo-100 flex items-center justify-center p-4">
+      <div className="bg-black text-white rounded-2xl shadow-xl w-full max-w-md p-8">
         <div className="flex justify-center mb-6">
           <div className="bg-blue-600 p-4 rounded-full">
             {step === 'email' ? (
@@ -91,12 +91,12 @@ export default function ForgotPassword({ onSwitchToLogin }: ForgotPasswordProps)
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-2">
+        <h2 className="text-3xl font-bold text-center mb-2">
           {step === 'email' && 'Forgot Password'}
           {step === 'otp' && 'Verify OTP'}
           {step === 'reset' && 'Reset Password'}
         </h2>
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center mb-8">
           {step === 'email' && 'Enter your email to receive OTP'}
           {step === 'otp' && 'Enter the OTP sent to your email'}
           {step === 'reset' && 'Enter your new password'}
@@ -117,14 +117,14 @@ export default function ForgotPassword({ onSwitchToLogin }: ForgotPasswordProps)
         {step === 'email' && (
           <form onSubmit={handleSendOTP} className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium mb-2">
                 Email
               </label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-black"
                 required
               />
             </div>

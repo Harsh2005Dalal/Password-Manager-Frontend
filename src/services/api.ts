@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'https://password-manager-backend-iota.vercel.app';
+const API_URL = import.meta.env.VITE_API_URL || 'https://password-manager-backend-iota.vercel.app/api';
 
 const getAuthHeader = () => {
   const user = localStorage.getItem('user');

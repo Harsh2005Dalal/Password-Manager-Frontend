@@ -32,18 +32,18 @@ export default function Login({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8">
+    <div className="min-h-screen bg-gradient-to-br from-black via-slate-800 to-indigo-100 flex items-center justify-center p-4">
+      <div className="bg-black text-white rounded-2xl shadow-xl w-full max-w-md p-8">
         <div className="flex justify-center mb-6">
           <div className="bg-blue-600 p-4 rounded-full">
             <Lock className="w-8 h-8 text-white" />
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-2">
+        <h2 className="text-3xl font-bold text-center  mb-2">
           Welcome Back
         </h2>
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center  mb-8">
           Sign in to access your password vault
         </p>
 
@@ -55,27 +55,27 @@ export default function Login({
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium  mb-2">
               Username
             </label>
             <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+              className="text-black w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium  mb-2">
               Password
             </label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+              className="text-black w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
               required
             />
           </div>
@@ -83,9 +83,9 @@ export default function Login({
           <button
             type="button"
             onClick={onSwitchToForgotPassword}
-            className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+            className="text-md text-blue-600 hover:text-blue-700 font-medium"
           >
-            Forgot Password?
+            Bhul gyi Password, Gaandu?
           </button>
 
           <button
@@ -97,7 +97,7 @@ export default function Login({
           </button>
         </form>
 
-        <p className="mt-6 text-center text-gray-600">
+        <p className="mt-6 text-center">
           Don't have an account?{' '}
           <button
             onClick={onSwitchToSignup}
